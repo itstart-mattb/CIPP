@@ -2,56 +2,68 @@
   "routes": [
     {
       "route": "_next/static/*",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "headers": {
         "cache-control": "must-revalidate, max-age=15770000"
       }
     },
     {
       "route": "*.{png,jpg,gif,xml,ico,css,js}",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "headers": {
         "cache-control": "must-revalidate, max-age=15770000"
       }
     },
     {
       "route": "/assets/*",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "headers": {
         "cache-control": "must-revalidate, max-age=15770000"
       }
     },
     {
       "route": "/login",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "rewrite": "/.auth/login/aad"
     },
     {
       "route": "/.auth/login/twitter",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "statusCode": 404
     },
     {
       "route": "/.auth/login/github",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "statusCode": 404
     },
     {
       "route": "/logout",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "redirect": "/.auth/logout?post_logout_redirect_uri=/LogoutRedirect"
     },
     {
       "route": "/authredirect",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/LogoutRedirect",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/404",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "/api/Public*",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "allowedRoles": ["admin", "editor", "readonly", "authenticated", "anonymous"]
     },
     {
       "route": "*",
+      "allowedForwardedHosts": ["cipp.itstart.com.au"],
       "allowedRoles": ["admin", "editor", "readonly", "authenticated"]
     }
   ],
